@@ -157,4 +157,9 @@ body {
     .video-background{
         display: none;
     }
+    .image img {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
