@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 class MarkersAll extends React.Component {
  
 componentWillReceiveProps(){
-  window.scrollTo(0,1100);
+  window.scrollTo({top:1100,left:0,behavior: 'smooth'});
 }
 
 createMarkers(){

@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import WOW from "wowjs";
 
-const Solutions = ()=> {
-   
+class Solutions extends React.Component {
+
+  componentDidMount() {
+    const wow = new WOW.WOW();
+    wow.init();
+    }
+
+render(){
 return(
     <div className="solutions-wrap">
         <div className="container">
         <h2>What can We Do?</h2>
         <div className="row">
-        <div className="col-lg-4">
+        <div className="col-lg-4 wow slideInLeft" data-wow-duration="1.5s">
         <div className="card" >
   <img className="card-img-top" src="https://www.theecoambassador.com/images/xRenewableenergy.jpg.pagespeed.ic.XwlFtokxOY.jpg"/>
   <div className="card-body">
@@ -17,7 +24,7 @@ return(
   </div>
 </div>
 </div>
-<div className="col-lg-4">
+<div className="col-lg-4 wow zoomIn" data-wow-duration="2s">
         <div className="card" >
   <img className="card-img-top" src="https://www.theecoambassador.com/images/xAirpollution7.jpg.pagespeed.ic.5jEPw5_cF5.jpg"/>
   <div className="card-body">
@@ -26,7 +33,7 @@ return(
   </div>
 </div>
 </div>
-<div className="col-lg-4">
+<div className="col-lg-4 wow slideInRight" data-wow-duration="1.5s">
         <div className="card" >
   <img className="card-img-top" src="http://www.vatnsholt.com/wp-content/uploads/2016/08/Procedimiento--1160x600.jpg"/>
   <div className="card-body">
@@ -36,7 +43,7 @@ return(
 </div>
 </div>
 
-<div className="mx-auto col-lg-4">
+<div className="mx-auto col-lg-4 wow slideInUp">
         <div className="card" >
   <img className="card-img-top" src="https://www.theecoambassador.com/images/xCOP21participants.jpg.pagespeed.ic.DMVh2MjJ2b.jpg"/>
   <div className="card-body">
@@ -45,7 +52,7 @@ return(
   </div>
 </div>
 </div>
-<div className="mx-auto col-lg-4">
+<div className="mx-auto col-lg-4 wow slideInUp" data-wow-delay="0.25s">
         <div className="card" >
   <img className="card-img-top" src="https://www.theecoambassador.com/images/xBiketowork.jpg.pagespeed.ic.ZCuqsJbnf8.jpg"/>
   <div className="card-body">
@@ -60,5 +67,6 @@ return(
     </div>
     
 );
+}
 }
 export default Solutions

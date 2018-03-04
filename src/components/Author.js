@@ -1,12 +1,20 @@
 import React from 'react';
+import WOW from "wowjs";
 
-const Author = ()=> {
+class Author extends React.Component {
+
+    componentDidMount() {
+        const wow = new WOW.WOW();
+        wow.init();
+        }
+
+    render(){
     return(
         <div className="author-wrap">
             <h1>Author</h1>
         <div className="container">
     <div className="row">
-        <div className="col-lg-4">
+        <div className="col-lg-4 wow tada" >
     <img className="rounded img-fluid" alt="" src="https://i.imgur.com/ljEkqZH.jpg"/>
 </div>
     <div className="text col-lg-8">
@@ -19,5 +27,6 @@ const Author = ()=> {
 </div>
     );
 
+}
 }
 export default Author

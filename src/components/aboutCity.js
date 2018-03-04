@@ -1,11 +1,10 @@
 import React,{Component} from "react";
 import {connect} from 'react-redux';
 
-
 class AboutCity extends Component {
 
     componentDidUpdate(){
-        window.scrollTo(0,750);
+        window.scrollTo({top:750,left:0,behavior: 'smooth'});
     }
     removeCity=()=>{
         this.props.dispatch({type: "REMOVE_CITY"});
